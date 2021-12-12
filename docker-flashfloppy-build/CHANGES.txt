@@ -1,0 +1,8 @@
+Originally From:
+https://github.com/planeturban/docker-flashfloppy
+
+Set to --no-install-recommends
+Switched to Debian slim image
+Allow override of repo URI
+Reduced clone overhead with depth and single branch.
+`
