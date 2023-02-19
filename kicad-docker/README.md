@@ -1,4 +1,13 @@
-How I use it:
+* What it is:
+
+Kicad 7 GUI for Podman/Docker
+
+Based on Ubuntu 22.04 LTS
+
+Using Kicad PPA
+
+
+* How I use it:
 
 Note: this is very insecure, but it's mostly so I don't have to find packages for my OS
 
