@@ -1,10 +1,9 @@
 FROM ubuntu:22.04
 MAINTAINER Steve <user@example.com>
-
-RUN apt-get update
-RUN apt-get -y install software-properties-common strace gdb mesa-utils
-RUN apt-add-repository ppa:kicad/kicad-7.0-releases && apt update
-RUN apt-get -y install kicad kicad-libraries
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
+RUN apt-get update && apt-get -y install --no-install-recommends software-properties-common strace gdb mesa-utils gpg-agent && apt-get clean
+RUN apt-add-repository ppa:kicad/kicad-8.0-releases && apt-get update && apt-get -y install kicad kicad-libraries && apt-get clean
 RUN mkdir /data
 RUN chown 1000:1000 /data
 
